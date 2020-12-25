@@ -1,0 +1,39 @@
+
+<div class="wrapperL fadeInDown" >
+  <div id="formContentL">
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="../assets/LEEPT.jpg" width="170px" height="200px" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+ <br><br>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="form-group">
+        <input type="text" class="fadeIn second" placeholder="Identifiant" formControlName="username">
+      </div>
+      <div class="alert alert-danger taille" *ngIf="(username.touched && username.errors?.required) || userna">
+          Champs obligatoire!
+      </div>
+      <div class="form-group">
+        <input type="password"  class="fadeIn third"  placeholder="Mot de passe" formControlName="password">
+        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+      </div>
+      <div class="alert alert-danger taille" *ngIf="password.touched && password.errors?.required">
+        Champs obligatoire!
+      </div>
+      <input type="submit" class="fadeIn fourth" value="Conectez-Vous">
+    </form>
+    <!-- Remind Passowrd -->        
+    <div id="formFooterL">
+      <a class="underlineHover" (click)="openResetPassword()">Forgot Password?</a>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+

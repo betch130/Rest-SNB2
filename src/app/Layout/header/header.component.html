@@ -1,0 +1,13 @@
+<nb-layout windowMode>
+  <nb-layout-header >
+    <ion-buttons  class="header-menu-trigger">
+      <ion-menu-button ></ion-menu-button>
+    </ion-buttons>
+    <app-header-contenu></app-header-contenu>
+  </nb-layout-header>
+
+  <nb-layout-column style="width: 100%;"  >
+    <ng-content select="router-outlet"></ng-content>
+  </nb-layout-column>
+
+</nb-layout>
